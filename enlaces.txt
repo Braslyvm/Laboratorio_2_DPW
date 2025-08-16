@@ -1,0 +1,2 @@
+URL del repositorio público en GitHub: https://github.com/Braslyvm/Laboratorio_2_DPW
+URL del sitio desplegado (GitHub Pages o Netlify): https://techskillsacademycr.netlify.app/  

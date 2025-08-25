@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --c-bg: #ffffff;
+  --c-text: #222;
+  --c-accent: #0077cc;
+  --c-card: #fff;
+  --c-border: #0d0696;
+  --c-highlight: #ff0000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 2;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-size: 23px;
+  margin: 0  100px;
+}
+

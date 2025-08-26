@@ -54,7 +54,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: var(--c-accent);
+  color:green;
 }
 
 .card p {
@@ -143,5 +143,6 @@ nav a + a {
     color: #9000ff;
     text-decoration: underline;
 }
+
 
 

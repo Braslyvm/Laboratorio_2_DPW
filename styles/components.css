@@ -22,6 +22,7 @@
   background: var(--c-card);
   border: 1px solid var(--c-border);
   padding: 1rem;
+  display: grid;
   border-radius: 10px;
   overflow: hidden;
   font-size: 23px;
@@ -75,4 +76,5 @@ a[href^="https://"] {
   padding: .3rem .6rem;
   border-radius: 6px;
 }
+
 

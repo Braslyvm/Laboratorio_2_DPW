@@ -243,3 +243,157 @@ odos los elementos `<img>` tienen texto alternativo que describe su contenido o 
 Los enlaces son claros y descriptivos en relación con su destino. Esto es importante para usuarios que navegan con lectores de pantalla sepan a donde seran redirijisdos al precionar el enlace.
 
 
+
+
+
+
+
+
+# Tech Skills Academy 2025
+💻 *Laboratorio 3*  
+**Nombre:** Brasly Villarebia Morales  
+**Carné:** 2023105915  
+**Curso:** IC-8057 – Introducción al Desarrollo de Páginas Web
+
+---
+
+## Inicaciones de donde se aplico cada tipo de elmento solicitado 
+
+### Selectores de tipo: aplicados en header, nav, section, img.
+- `header`:
+  - controla tipografía global: `font-family: Arial, sans-serif`
+  - aplicación del color de fondo mediante los valores estáticos o globales que se definieron en el `:root`
+  - color de texto 
+  - aplicación de márgenes a los lados `margin: 0 100px;`
+  - tamaño de fuente: `font-size: 23px`
+- `nav`:
+  - implemente el `header > nav` paara separar una linea entre el titilo y los indices mediante `border-top: 2px solid var(--c-border);`
+  - `nav a` para asiganrle un color a  los enlaces 
+  - utilice `nav ul` para comodar los elementos de manera horizontal 
+- `section`:
+  - utilice varias veces para poder asiganarles un identificador a cada bloque y sea mas facil de manipular
+- `img`: se aplico en `#cursos` y `#Universidades`, para en estos previamente se definen el tamaño que puede utilizar para que todas las imagenes sean del mismo tamaño.
+```css
+#Universidades .img-Univiersidad {
+    width: 200px;
+    height: 150px;
+    background-color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0; 
+    box-shadow: none; 
+    overflow: hidden;
+}
+```
+y mediantes estos ajueste a los elemntos img se les permite que ocupen el tamaño que necesiten.
+```css
+#Universidades .img-Univiersidad img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: block;
+    border: none; 
+}
+```
+
+
+### Selectores de clase: .btn en botones, .card en secciones de expositores.
+- `.btn`: se utiliza una ves pero se le asignan diferentes propiadades:
+```css
+.btn {
+  background: var(--c-accent);
+  color: white;
+  padding: .5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:focus-visible {
+  outline: 3px solid var(--c-highlight);
+}
+.btn:active {
+  transform: translateY(0);
+}
+```
+- `.card`: es aplicado para los bloques de los cursos disponibles, estos mismo de definen el tamaño, el color de fondo, incluso se le asigan un propio estilo a los elmentos p que se encuentran dentro.
+
+### Selectores de ID: #agenda y #expositores en secciones principales.
+cada seccion preicipal tiene su indicador, este mismo es utilizadon en los css para establecer un diseño personalizado a cada sector de la pagina, esto permitiendo identificar de manera mas ripida que se esta manipulando metiante los estilos.
+
+Algunos ID usado desde el css son:
+- `#Agenda`
+- `#Registro`
+- `#Expositores`
+- `#Curso`
+- `#Universidades`
+
+### Selectores de atributo: a[target="_blank"] en enlaces externos, img[alt] en imágenes.
+
+- `a[target="_blank"]`: enlaces externos en verde.
+- `img[alt]`: imágenes con atributo alt muestran un borde gris.
+- `input[type="email"] `: campo de correo electrónico con borde azul (border: 2px solid var(--c-accent);).
+
+### Combinadores: nav a + a en menú, .card p en tarjetas.
+- `.card p`:cambia el tamaño de fuente solo de los párrafos dentro de .card.
+- `nav a + a`: añade una pequeña distancia entre los enlaces.
+- `.tag ~ .tag`: separa etiquetas consecutivas aplicando margin-left.
+
+### Pseudo-clases de estado: :hover en .btn, :focus-visible en enlaces.
+- `.btn:hover`: al pasar el cursor el boton se mueve hacua arriba generado una efecto de visualizacion.
+- `.btn:focus-visible`: agrega borde rojo accesible para navegación con teclado.
+- `.btn:active`:restaura el botón a su posición normal.
+- `.curso-imagen img:hover`: Al aplar las imagenes se le saplica un zoom epara quegenrar una animas.
+- `.redes a:hover` y `.redes a:focus-visible`:cambian a morado y se subrayan.
+
+### Pseudo-clases estructurales: :first-child y :nth-child() en listas.
+- `.listado li:first-child `: el primer elemnto de los sitios por donde se va a realizar la clase se pone en negrita.
+- `.listado li:last-child`: el ultimo elemento de la lista la opacaciddad se reduce.
+- `.listado li:nth-child(2n)` : el ultimo elemento de l alista alterna con el color blanco.
+
+### Especificidad (!important e inline style) → ejemplo en .badge y en un h2.
+- `.card ``.badge `{ background: rgb(226, 88, 88) !important; }: uso de !important para forzar estilo en la insignia.
+- En algunas estiquetas de ttutulos se aplica  style="text-align: center;" para centrar y no crear una clase extra 
+
+
+### Box model: aplicado en .card y secciones con márgenes/padding.
+- `.card `: aplica padding evitar choques entre si.
+- `body`: { margin: 0 100px; }  especificamente para dar una leve separacion a los laterales `margin: 0  100px;`.
+- `*`: esta bloque hace que todos los elemento automaticamente ten un padding y margin para simular un reset desde el inicio.
+
+### Overflow: en un párrafo con texto largo dentro de .card.
+- `.curso-imagen`: { overflow: hidden; } esto evita que las imágenes se desborden del contenedor.
+### Flexbox: en nav para alinear enlaces.
+- `nav ul`: establece los elementos de navegaxion en horzontal { display: flex; gap: 1rem; }.
+- `.curso-imagen`: es utilizado para cenbtrar la imagen en un contenedor para que no se nora la diferencia de tamaño respecto a las demas imagenes.
+
+
+### Grid: en .cards-container para organizar tarjetas.
+- `.cards`: se apliga display: grid; para asegurar que los elemntos se coloquen en columnas.
+
+
+### Position relative/absolute: en .banner .etiqueta para destacar un texto.
+- `.relative-box`: utilizado para que el badge “Top” con .absolute-item se pueda posicionar dentro de esta tarjeta.
+- `.absolute-item`: badge, Se muestra dentro del título (<h3>), indicando que el curso es nuevo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

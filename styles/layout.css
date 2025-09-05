@@ -157,18 +157,6 @@ nav a + a {
     margin: 10px;
 }
 
-@media (min-width: 768px){
-   .profesor {
-    min-width: 200px;
-  }
-  .profesor-datos {
-      font-size: 0.8rem; 
-  }
-
-  .redes a {
-      font-size: 0.9rem;
-  }
-}
 
 
 @media (max-width: 480px) { 
@@ -227,6 +215,7 @@ nav a + a {
 
 
 }
+
 
 
 

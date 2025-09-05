@@ -14,7 +14,10 @@
 		<header>
 			<h1>Tech Skills Academy 2025</h1>
             <nav aria-label="Menú principal de navegación del sitio">
-                <ul>
+            <nav class="menu-hamburguesa">
+                <input type="checkbox" id="menu-toggle" aria-controls="menu-list" aria-expanded="true">
+                <label for="menu-toggle">☰</label>
+                <ul id="menu-list">
                     <li><a href="#Bienvenida">Bienvenida</a></li>
                     <li><a href="#Cursos">Cursos</a></li>
                     <li><a href="#Agenda">Agenda</a></li>
@@ -24,7 +27,6 @@
                 </ul>
             </nav>
 		</header>
-
 		<main>
             <section id="Bienvenida">
                 <h2 class="Titulos" style="margin-bottom:24px;">Bienvenida</h2>
@@ -104,17 +106,14 @@
 				<form class="card"> 
 					<label for="nombre">Nombre:</label>
 					<input type="text" id="nombre" name="nombre" required>
-					<br>
 					<label for="correo">Correo electrónico:</label>
 					<input type="email" id="correo" name="correo" required>
-					<br>
 					<label for="curso">Selecciona un curso:</label>
 					<select id="curso" name="curso">
 						<option value="datos">Análisis de Datos</option>
 						<option value="ciberseguridad">Ciberseguridad</option>
 						<option value="redes">Redes</option>
 					</select>
-					<br>
 					<button type="submit" class="btn" aria-label="Enviar registro">Enviar</button>
 				</form>
 			</section>
@@ -184,3 +183,9 @@
 		</footer>
 	</body>
 </html>
+
+
+
+
+
+

@@ -188,7 +188,9 @@ nav a + a {
     min-width: 180px;
   }
   .profesor-datos {
-      font-size: 0.6rem; 
+    font-size: 0.6rem; 
+    display: flex;        
+    flex-direction: column; 
   }
 
   .redes a {
@@ -225,4 +227,5 @@ nav a + a {
 
 
 }
+
 

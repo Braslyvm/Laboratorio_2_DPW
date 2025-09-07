@@ -9,10 +9,24 @@
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/components.css">
         <link rel="stylesheet" href="styles/overrides.css">
+         
     </head>
 	<body>
 		<header>
-			<h1>Tech Skills Academy 2025</h1>
+			<div class="hero-container">
+                <!-- Título principal -->
+                <h1>Tech Skills Academy 2025</h1>
+
+                <!-- Hero responsivo -->
+                <picture class="hero-image">
+                    <!-- Desktop: ≥1024px -->
+                    <source media="(min-width:1024px)" srcset="https://cdn-icons-png.flaticon.com/128/3474/3474360.png">
+                    <!-- Tablet: ≥768px -->
+                    <source media="(min-width:768px)" srcset="https://cdn-icons-png.flaticon.com/128/1530/1530273.png">
+                    <!-- Mobile: ≤480px -->
+                    <img src="https://cdn-icons-png.flaticon.com/128/545/545245.png" alt="Hero Tech Skills Academy">
+                </picture>
+            </div>
             <nav aria-label="Menú principal de navegación del sitio">
             <nav class="menu-hamburguesa">
                 <input type="checkbox" id="menu-toggle" aria-controls="menu-list" aria-expanded="true">
@@ -35,38 +49,38 @@
                 Nuestros profesores, recién graduados del Tecnológico, compartirán sus conocimientos y experiencias.</p>
                 <p>Explora los cursos, conoce la agenda y regístrate para no perder la oportunidad de aprender de profesionales apasionados y motivados.</p>    
             </section>
-
 			<section id="Cursos">
                 <h2 class="Titulos">Cursos disponibles</h2>
                 <p>En Tech Skills Academy 2025, nuestros cursos están diseñados por profesionales recién graduados del 
                     Tecnológico, pensados especialmente para principiantes que desean iniciarse en el mundo tecnológico. Cada curso combina teoría, 
                     práctica y herramientas modernas para que adquieras habilidades sólidas desde cero.</p>
+                <div class="cards-container">
+                    <article class="card relative-box">
+                        <h3>Análisis de Datos <span class="badge">Nuevo</span></h3>
+                        <p>Este curso está pensado para quienes no tienen experiencia previa en análisis de datos...</p>
+                        <figure class="curso-imagen">
+                                <img src="https://www.isdi.education/es/wp-content/uploads/2024/03/4665-herramientas20de20analisis20de20datos.jpg" alt="Imagen relacionada con análisis de datos" tabindex="-1">
+                        </figure>
+                        <span class="absolute-item">Top</span>
+                    </article>
 
-                <article class="card relative-box">
-                    <h3>Análisis de Datos <span class="badge">Nuevo</span></h3>
-                    <p>Este curso está pensado para quienes no tienen experiencia previa en análisis de datos...</p>
-                    <figure class="curso-imagen">
-                            <img src="https://www.isdi.education/es/wp-content/uploads/2024/03/4665-herramientas20de20analisis20de20datos.jpg" alt="Imagen relacionada con análisis de datos" tabindex="-1">
-                    </figure>
-                    <span class="absolute-item">Top</span>
-                </article>
+                    <article class="card">
+                        <h3>Ciberseguridad <span class="badge">Popular</span></h3>
+                        <p>Si eres nuevo en seguridad informática, este curso te introducirá a los conceptos básicos...</p>
+                        <figure class="curso-imagen">
+                            <img src="https://digitalhealth.org.au/wp-content/uploads/2022/03/technology-security-concept-safety-digital-protection-system-1080x675.jpg" alt="Imagen relacionada con ciberseguridad" tabindex="-1">
+                        </figure>
+                    </article>
 
-                <article class="card">
-                    <h3>Ciberseguridad <span class="badge">Popular</span></h3>
-                    <p>Si eres nuevo en seguridad informática, este curso te introducirá a los conceptos básicos...</p>
-                    <figure class="curso-imagen">
-                        <img src="https://digitalhealth.org.au/wp-content/uploads/2022/03/technology-security-concept-safety-digital-protection-system-1080x675.jpg" alt="Imagen relacionada con ciberseguridad" tabindex="-1">
-                    </figure>
-                </article>
-
-                <article class="card">
-                    <h3>Redes y Telecomunicaciones <span class="badge">Recomendado</span></h3>
-                    <p>Este curso está diseñado para quienes quieren iniciarse en redes sin experiencia previa...</p>
-                    <figure class="curso-imagen">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2K1gOnPPo2rklIvdASwCAjldRivczewXvhA&s" alt="Imagen relacionada con redes" tabindex="-1">
-                    </figure>
-                    <figcaption>Curso de Redes y Telecomunicaciones</figcaption>
-                </article>
+                    <article class="card">
+                        <h3>Redes y Telecomunicaciones <span class="badge">Recomendado</span></h3>
+                        <p>Este curso está diseñado para quienes quieren iniciarse en redes sin experiencia previa...</p>
+                        <figure class="curso-imagen">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2K1gOnPPo2rklIvdASwCAjldRivczewXvhA&s" alt="Imagen relacionada con redes" tabindex="-1">
+                        </figure>
+                        <figcaption>Curso de Redes y Telecomunicaciones</figcaption>
+                    </article>
+                </div>
             </section>
 			<section id="Agenda">
 				<h2 class="Titulos" style="text-align: center;">Agenda</h2>

@@ -157,6 +157,51 @@ nav a + a {
     margin: 10px;
 }
 
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    justify-content: space-between; 
+    width: 100%;           
+}
+
+
+
+.hero-image, 
+.hero-image img, 
+.hero-image source, 
+.hero-image a {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    
+}
+.hero-image img:focus,
+.hero-image a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hero-container img {
+      max-width: 50px;
+      margin-top: 5px;
+}
+img {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column; 
+    display: flex;
+    align-items: center;
+  }
+  .hero-container picture,
+  .hero-container img {
+    max-width: 50px;
+    margin-top: 5px;
+  }
+}
 
 
 @media (max-width: 480px) { 
@@ -164,13 +209,13 @@ nav a + a {
     width: 200px ;
     height: 150px ;
   }
-    #Universidades .img-Univiersidad {
-      width: 45%;   
-      height: 100px; 
+  #Universidades .img-Univiersidad {
+    width: 45%;   
+    height: 100px; 
   }
 
   #Universidades .universidades-imagenes {
-      gap: 10px ;
+    gap: 10px ;
   }
   .profesor {
     min-width: 160px;
@@ -184,21 +229,21 @@ nav a + a {
   .redes a {
       font-size: 0.6rem;
   }
-      #Registro .card {
-        margin: 5px;
-        padding: 15px;
-    }
-    #Registro input,
-    #Registro select,
-    #Registro .btn {
-        padding: 2px;
-        margin: 2px;
-    }
+  #Registro .card {
+    margin: 5px;
+    padding: 15px;
+  }
+  #Registro input,
+  #Registro select,
+  #Registro .btn {
+      padding: 2px;
+      margin: 2px;
+  }
 
-    #Agenda {
-    background: #ffffff;
-    padding: 0.3rem;
-    text-align: center;
+  #Agenda {
+  background: #ffffff;
+  padding: 0.3rem;
+  text-align: center;
   }
 
   #Agenda table {
@@ -212,11 +257,18 @@ nav a + a {
     padding: .2rem;
     text-align: center;
   }
+  .hero-container {
+    display: flex;
+    flex-direction: row;     
+    align-items: center;     
+    justify-content: space-between; 
+    width: 100%;            
+  }
 
+  .hero-container picture,
+  .hero-container img {
+    max-width: 50px;       
+    margin: 0;              
+  }
 
 }
-
-
-
-
-

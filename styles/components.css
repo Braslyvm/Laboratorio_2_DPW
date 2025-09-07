@@ -22,16 +22,22 @@
   background: var(--c-card);
   border: 1px solid var(--c-border);
   padding: 1rem;
-  display: grid;
   border-radius: 10px;
   overflow: hidden;
-
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
+
 .card p {
-    font-size: 1.3rem;
-    line-height: 1;  
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
 
 .absolute-item {
   position: absolute;
@@ -48,6 +54,7 @@
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
+  font-size: 0.8rem;
   
 }
 .listado li:first-child {
@@ -78,7 +85,6 @@ a[href^="https://"] {
   background: #f5f1f1;
   padding: 2rem;
 }
-
 .menu-hamburguesa * {
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -87,11 +93,13 @@ a[href^="https://"] {
 .menu-hamburguesa {
   width: 200px;
 }
+
 .menu-hamburguesa input {
   display: none;
 }
+
 .menu-hamburguesa label {
-  display: inline-block;
+  display: none;
   border: 1px solid black;
   border-radius: 5px;
   width: 30px;
@@ -126,9 +134,19 @@ a[href^="https://"] {
 .menu-hamburguesa li:last-child {
   border-bottom: none;
 }
+
 .menu-hamburguesa input:checked ~ ul {
   display: block;
 }
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1rem; 
+  justify-content: center; 
+}
+
+
 @media (min-width: 768px) {
   .menu-hamburguesa ul {
     display: block; 
@@ -136,45 +154,59 @@ a[href^="https://"] {
   .menu-hamburguesa input:checked ~ ul {
     display: none;
   }
-      .card  {
+  .card  {
     font-size: 18px;
     border-radius: 10px;
   }
-    .badge {
+  .badge {
     font-size: 0.8rem;
   }
+  .cards-container {
+    grid-template-columns: repeat(2, 300px); 
+    justify-content: center; 
+  }
+  .absolute-item {
+    padding: .1rem .3rem;
+  } 
 }
 
 @media (min-width: 1024px) {
   .menu-hamburguesa ul {
     width: 250px;
   }
-      .card  {
+  .card  {
     font-size: 23px;
     border-radius: 10px;
   }
   .badge {
     font-size: 0.8rem;
   }
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 480px) { 
+  .menu-hamburguesa label {
+    display: inline-block;
+  }
+
   .card  {
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 10px;
   }
-    .badge {
-    font-size: 0.7rem;
+  .badge {
+    font-size: 0.8rem;
   }
   .card p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.3;  
-}
-.absolute-item  {
+  }
+  .absolute-item  {
     padding: .2rem .4rem !important;
-}
-.relative-box {
-  padding: 0.3rem !important;
-  margin-top: 10px;
-}
+  }
+  .relative-box {
+    padding: 0.3rem !important;
+    margin-top: 10px;
+  }
 }
